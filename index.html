@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Contact form</title>
+		<link rel="stylesheet" href="./assets/styles/styles.css" />
+		<script src="./assets/scripts/script.js" defer></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1 class="sr-only">Contact form</h1>
+			</header>
+			<main>
+				<section class="contact">
+					<div class="contact__container">
+						<div class="contact__wrapper">
+							<h2 class="contact__title">Contact Us</h2>
+							<form action="#" class="contact__form form-contact flex-column">
+								<fieldset class="form-contact__items flex-column">
+									<fieldset class="form-contact__row flex-row">
+										<legend class="sr-only">User first and last name</legend>
+										<div class="form-contact__item flex-column">
+											<label for="first-name" class="form-contact__label">First Name<span class="form-contact__label-required">*</span> </label>
+											<input type="text" name="user-first-name" id="first-name" class="form-contact__input border" aria-describedby="first-name-error" />
+											<span class="form-contact__error-msg" role="alert" id="first-name-error">This field is required</span>
+										</div>
+										<div class="form-contact__item flex-column">
+											<label for="last-name" class="form-contact__label">Last Name<span class="form-contact__label-required">*</span> </label>
+											<input type="text" name="user-last-name" id="last-name" class="form-contact__input border" aria-describedby="last-name-error" />
+											<span class="form-contact__error-msg" id="last-name-error" role="alert">This field is required</span>
+										</div>
+									</fieldset>
+									<div class="form-contact__item flex-column">
+										<label for="email" class="form-contact__label">Email Address<span class="form-contact__label-required">*</span> </label>
+										<input type="email" name="user-email-address" id="email" class="form-contact__input border" aria-describedby="email-error" />
+										<span class="form-contact__error-msg" id="email-error" role="alert">Please enter a valid email address</span>
+									</div>
+									<div class="form-contact__item flex-column">
+										<div class="form-contact__label" id="query-type">Query Type<span class="form-contact__label-required">*</span></div>
+										<fieldset class="form-contact__row flex-row">
+											<legend class="sr-only">Query Type</legend>
+											<div class="form-contact__item-radio border flex-row">
+												<input type="radio" name="user-query-type" id="general-query" value="General Enquiry" class="form-contact__input-radio" aria-describedby="query-type-error" />
+												<label for="general-query" class="form-contact__label-radio flex-row">General Enquiry</label>
+											</div>
+											<div class="form-contact__item-radio border flex-row">
+												<input type="radio" name="user-query-type" id="support-query" value="Support Request" class="form-contact__input-radio" aria-describedby="query-type-error" />
+												<label for="support-query" class="form-contact__label-radio flex-row">Support Request</label>
+											</div>
+										</fieldset>
+										<span class="form-contact__error-msg" id="query-type-error" role="alert">Please select a query type</span>
+									</div>
+									<div class="form-contact__item flex-column">
+										<label for="message" class="form-contact__label">Message<span class="form-contact__label-required">*</span> </label>
+										<textarea class="form-contact__textarea border" id="message" name="user-message" aria-describedby="message-error"></textarea>
+										<span class="form-contact__error-msg" id="message-error" role="alert">This field is required</span>
+									</div>
+								</fieldset>
+								<div class="form-contact__consent flex-column">
+									<div class="form-contact__consent-item flex-row">
+										<input type="checkbox" name="consent" id="consent" class="form-contact__input-checkbox" aria-describedby="consent-error" />
+										<label for="consent" class="form-contact__label">I consent to being contacted by the team <span class="form-contact__label-required">*</span> </label>
+									</div>
+									<span class="form-contact__error-msg" id="consent-error" role="alert">To submit this form, please consent to being contacted</span>
+								</div>
+								<button type="submit" class="form-contact__btn"><span>Submit</span></button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</footer>
+			<div class="success-msg flex-column">
+				<h3 class="success-msg__title flex-row">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.0306 6.96937C14.1004 7.03903 14.1557 7.12175 14.1934 7.21279C14.2312 7.30384 14.2506 7.40144 14.2506 7.5C14.2506 7.59856 14.2312 7.69616 14.1934 7.78721C14.1557 7.87825 14.1004 7.96097 14.0306 8.03063L8.78063 13.2806C8.71097 13.3504 8.62826 13.4057 8.53721 13.4434C8.44616 13.4812 8.34857 13.5006 8.25 13.5006C8.15144 13.5006 8.05385 13.4812 7.9628 13.4434C7.87175 13.4057 7.78903 13.3504 7.71938 13.2806L5.46938 11.0306C5.32865 10.8899 5.24959 10.699 5.24959 10.5C5.24959 10.301 5.32865 10.1101 5.46938 9.96937C5.61011 9.82864 5.80098 9.74958 6 9.74958C6.19903 9.74958 6.3899 9.82864 6.53063 9.96937L8.25 11.6897L12.9694 6.96937C13.039 6.89964 13.1218 6.84432 13.2128 6.80658C13.3038 6.76884 13.4014 6.74941 13.5 6.74941C13.5986 6.74941 13.6962 6.76884 13.7872 6.80658C13.8783 6.84432 13.961 6.89964 14.0306 6.96937ZM19.5 9.75C19.5 11.6784 18.9282 13.5634 17.8568 15.1668C16.7855 16.7702 15.2627 18.0199 13.4812 18.7578C11.6996 19.4958 9.73919 19.6889 7.84787 19.3127C5.95656 18.9365 4.21928 18.0079 2.85571 16.6443C1.49215 15.2807 0.563554 13.5434 0.187348 11.6521C-0.188858 9.76082 0.00422452 7.80042 0.742179 6.01884C1.48013 4.23726 2.72982 2.71451 4.33319 1.64317C5.93657 0.571828 7.82164 0 9.75 0C12.335 0.00272983 14.8134 1.03084 16.6413 2.85872C18.4692 4.68661 19.4973 7.16498 19.5 9.75ZM18 9.75C18 8.1183 17.5161 6.52325 16.6096 5.16655C15.7031 3.80984 14.4146 2.75242 12.9071 2.12799C11.3997 1.50357 9.74085 1.34019 8.14051 1.65852C6.54017 1.97685 5.07016 2.76259 3.91637 3.91637C2.76259 5.07015 1.97685 6.54016 1.65853 8.1405C1.3402 9.74085 1.50358 11.3996 2.128 12.9071C2.75242 14.4146 3.80984 15.7031 5.16655 16.6096C6.52326 17.5161 8.11831 18 9.75 18C11.9373 17.9975 14.0343 17.1275 15.5809 15.5809C17.1275 14.0343 17.9975 11.9373 18 9.75Z" fill="white" />
+					</svg>
+					<span>Message Sent!</span>
+				</h3>
+				<div class="success-msg__text">
+					<p>Thanks for completing the form. We'll be in touch soon!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
