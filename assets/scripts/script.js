@@ -69,13 +69,21 @@ if (formField) {
 
 	function showError(el) {
 		el.classList.add('error');
+		const input = el.querySelector('input, textarea');
+		if (input) input.setAttribute('aria-invalid', 'true');
 	}
 
 	function resetErrors(els) {
 		if (els && typeof els.forEach === 'function') {
-			els.forEach(el => el.classList.remove('error'));
+			els.forEach(el => {
+				el.classList.remove('error');
+				const input = el.querySelector('input, textarea');
+				if (input) input.setAttribute('aria-invalid', 'false');
+			});
 		} else if (els) {
 			els.classList.remove('error');
+			const input = els.querySelector('input, textarea');
+			if (input) input.setAttribute('aria-invalid', 'false');
 		}
 	}
 
